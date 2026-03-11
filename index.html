@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tempat Pelatihan Motor</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link ke file CSS eksternal -->
+</head>
+<body>
+    <header>
+        <div class="logo"> Pelatihan motor</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container" id="home">
+        <div class="join-us">
+            <h1>Ayo Belajar Motor</h1>
+            <p>Pelatihan untuk mengedarai motor</p>
+        </div>
+
+        <div class="slider">
+            <div class="slides" id="slides">
+                <div class="slide"><img src="foto/belajar-motor.jpg" alt="PS Image 1"></div>
+                <div class="slide"><img src="foto/Belajar-motor2.jpg" alt="PS Image 2"></div>
+                <div class="slide"><img src="foto/ngata.jpg" alt="PS Image 3"></div>
+            </div>
+            <button class="prev" onclick="prevSlide()">&#10094;</button>
+            <button class="next" onclick="nextSlide()">&#10095;</button>
+        </div>
+
+        <div class="price-list">
+            <h2>Harga pelatihan</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Pertemuan</th>
+                        <th>Harga</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1 kali pertemuan</td>
+                        <td>Rp 100.000</td>
+                    </tr>
+                    <tr>
+                        <td>3 kali pertemuan</td>
+                        <td>Rp 150.000</td>
+                    </tr>
+                    <tr>
+                        <td>6 kali pertemuan </td>
+                        <td>Rp 600.000</td>
+                    </tr>
+                    <tr>
+                        <td>permanen pertemuan</td>
+                        <td>Rp 100.000.000 </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Bagian Tentang Kami -->
+    <div class="container" id="about">
+        <div class="about-us">
+            <h2>Tentang Kami</h2>
+            <p>Tempat pelatihan motor kami telah membuat seseorang tidak bisa membawa motor menjadi bisa membawa motor dengan lancar dan aman dijalan raya. </p>
+        </div>
+    </div>
+
+    <!-- Bagian Foto Fasilitas -->
+    <div class="container">
+        <div class="facilities">
+            <h2>Guru Pembimbing </h2>
+            <p>Kami Memiliki Guru Pelatih Yang terbaik Disini.</p>
+
+            <div class="facility-images">
+                <img src="foto/febri.jpg" alt="Guru Febri">
+                <img src="foto/satrio.jpg" alt="Fasilitas 2">
+                <img src="foto/padli.jpg" alt= "guru Padli">
+            </div>
+        </div>
+    </div>
+
+    <!-- Bagian Contact Kami -->
+    <div class="container" id="contact">
+        <div class="contact-us">
+            <h2>Contact Kami</h2>
+            <p><strong>Alamat:</strong> Jl.Pasir putih. 321, Kota Bangkinang, Indonesia</p>
+            <p><strong>Telepon:</strong> +62 851-9562-0867</p>
+            <p><strong>Email:</strong> pakfebri@gmail.com</p>
+            <p><strong>Jam Operasional:</strong> Senin - Jumat, 12:00 - 17:00</p>
+        </div>
+    </div>
+
+    <!-- Footer yang Panjang -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Tentang pelatihan motor</h3>
+                <p>Kami siap membantu orang yang tidak bisa membawa motor menjadi mahir membawa motor.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Link Cepat</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">Tentang Kami</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Ikuti Sosial media kami</h3>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Twitter</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Kontak</h3>
+                <p>Jl.pasir putih. 321, bangkinang</p>
+                <p>+62 851-9562-0867</p>
+                <p>pakfebri@gmail.com</p>
+            </div>
+        </div>
+        <p>&copy; 2007 Kami Siap Membantu Anda</p>
+    </footer>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.getElementById('slides');
+        const totalSlides = slides.children.length;
+
+        function showSlide(index) {
+            slides.style.transform = `translateX(-${index * 100}%)`;
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            showSlide(currentSlide);
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            showSlide(currentSlide);
+        }
+
+        // Auto slide every 3 seconds
+        setInterval(nextSlide, 3000);
+    </script>
+</body>
+</html>

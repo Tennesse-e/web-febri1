@@ -1,0 +1,164 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #056305; /* Biru tua */
+    color: white; /* Teks putih */
+}
+header {
+    background-color: #757474;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+nav ul li {
+    margin-left: 20px;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgb(13, 161, 7); /* Biru tua transparan untuk kontras */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    color: white; /* Pastikan teks di container putih */
+}
+.join-us {
+    text-align: center;
+    margin-bottom: 40px;
+}
+.join-us h2 {
+    color: white; /* Teks putih */
+}
+.slider {
+    position: relative;
+    max-width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.slides {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+.slide {
+    min-width: 100%;
+}
+.slide img {
+    width: 100%;
+    height: auto;
+}
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(117, 113, 113, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+.prev { left: 10px; }
+.next { right: 10px; }
+.price-list {
+    margin-top: 40px;
+}
+.price-list h2 {
+    text-align: center;
+    color: white; /* Teks putih */
+}
+.price-list table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.price-list th, .price-list td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    color: white; /* Teks putih di tabel */
+}
+.price-list th {
+    background-color: rgba(255, 255, 255, 0.1); /* Sedikit transparan untuk kontras */
+}
+.about-us {
+    margin-top: 40px;
+    text-align: center;
+}
+.about-us h2 {
+    color: white; /* Teks putih */
+}
+.facilities {
+    margin-top: 40px;
+    text-align: center;
+}
+.facilities h2 {
+    color: white; /* Teks putih */
+}
+.facilities .facility-images {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.facilities img {
+    width: 30%;
+    margin: 10px;
+    border-radius: 8px;
+}
+.contact-us {
+    margin-top: 40px;
+    text-align: center;
+}
+.contact-us h2 {
+    color: white; /* Teks putih */
+}
+.contact-us p {
+    margin: 10px 0;
+    color: white; /* Teks putih */
+}
+footer {
+    background-color: #515a57;
+    color: white;
+    padding: 20px;
+    margin-top: 20px;
+    text-align: center;
+}
+footer .footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+footer .footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px;
+}
+footer .footer-section h3 {
+    margin-bottom: 10px;
+    color: white; /* Teks putih */
+}
+footer .footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+footer .footer-section ul li {
+    margin-bottom: 5px;
+}
+footer .footer-section ul li a {
+    color: white;
+    text-decoration: none;
+}
